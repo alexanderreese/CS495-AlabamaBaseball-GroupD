@@ -1,2 +1,2 @@
-# CS495-AlabamaBaseball
+# CS495-AlabamaBaseball-GroupD
 Capstone Project
