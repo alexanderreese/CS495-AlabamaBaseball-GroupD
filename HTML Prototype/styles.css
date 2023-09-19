@@ -1,0 +1,125 @@
+/* Reset default margin and padding */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+input,
+select {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and center the content */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the page title */
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style the form container */
+#input-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center-align horizontally */
+    justify-content: center;
+    /* Center-align vertically */
+    margin-bottom: 10px;
+}
+
+/* Style labels for input fields */
+label {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style text inputs */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the submit button */
+button {
+    margin-top: 100px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Style the result message */
+#result {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Add hover effect to the submit button */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Center the submit button */
+button {
+    margin: 0 auto;
+    display: block;
+}
+
+#title-bar {
+    background-color: #990000;
+    /* Alabama Crimson */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    /* Text color for the title and logo */
+    margin-bottom: 20px;
+}
+
+/* Style the logo */
+#title-bar img {
+    max-width: 100px;
+    /* Adjust the logo's max width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 10px;
+    /* Add some spacing between logo and title */
+}
+
+/* Style the title */
+#title-bar h1 {
+    font-size: 24px;
+    margin-top: 5px;
+    color: white;
+    /* Adjust as needed */
+}
+
+label[for="dropdown2"] {
+    margin-top: 20px;
+    /* Adjust the margin-bottom value as needed */
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pitch Grader</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <header id="title-bar">
+        <img src="https://image.pngaaa.com/622/4347622-middle.png" alt="University of Alabama Logo">
+        <h1>Pitch Grader</h1>
+    </header>
+    <label for="dropdown1">Handedness:</label>
+    <select id="dropdown1">
+        <option value="Select Handedness">Select Handedness</option>
+        <option value="Left">Left</option>
+        <option value="Right">Right</option>
+        <!-- Add options here -->
+    </select>
+
+    <label for="dropdown2">Pitch Type:</label>
+    <select id="dropdown2">
+        <option value="Select Pitch Type">Select Pitch Type</option>
+        <option value="4S Fastball">4S Fastball</option>
+        <option value="2S Fastball">2S Fastball</option>
+        <option value="SI Fastball">SI Fastball</option>
+        <option value="CT Fastball">CT Fastball</option>
+        <option value="Cutter">Cutter</option>
+        <option value="Gyro Slider">Gyro Slider</option>
+        <option value="Slider">Slider</option>
+        <option value="Slutter">Slutter</option>
+        <option value="Sweeper">Sweeper</option>
+        <option value="Slurve">Slurve</option>
+        <option value="12/6">12/6</option>
+        <option value="Traditional CH">Traditional CH</option>
+        <option value="Sidespin CH">Sidespin CH</option>
+        <option value="Splitter">Splitter</option>
+        <!-- Add options here -->
+    </select>
+
+    <br><br>
+
+    <div id="input-container">
+        <!-- Input boxes -->
+        <label for="input1">Velocity:</label>
+        <input type="text" id="input1"><br>
+
+        <label for="input2">Induced Vertical Break:</label>
+        <input type="text" id="input2"><br>
+
+        <label for="input3">Horizontal Break:</label>
+        <input type="text" id="input3"><br>
+
+        <label for="input4">Spin Rate:</label>
+        <input type="text" id="input4"><br>
+
+        <label for="input5">Release Height:</label>
+        <input type="text" id="input5"><br>
+
+        <label for="input6">Extension:</label>
+        <input type="text" id="input6"><br>
+
+        <label for="input7">Vertical Approach Angle:</label>
+        <input type="text" id="input7"><br>
+
+        <!-- Add more input boxes as needed -->
+    </div>
+    <button onclick="gradePitch()">Grade Pitch</button>
+
+    <div id="result"></div>
+
+    <!-- Include JavaScript code -->
+    <script src="script.js"></script>
+</body>
+
+</html>
