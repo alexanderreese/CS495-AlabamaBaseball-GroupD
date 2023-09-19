@@ -1,0 +1,59 @@
+.pitch-input-form {
+  max-width: 300px;
+  margin: 50px;
+  margin-top: 5px;
+  margin-right: 0px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: scale(0.8);
+  transform-origin: top left;
+}
+
+.container {
+  display: flex; /* Use flexbox for layout */
+}
+
+.inputForm {
+  /* flex: 1; Allow input form to grow and take available space */
+  margin-right: 0px;
+}
+
+.graphContainer {
+  flex: 1; /* Allow graph to grow and take available space */
+  margin-right: 5px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
