@@ -7,7 +7,7 @@ app.use(cors()); // Enable CORS for all routes
 app.use(express.json()); // Use the express.json() middleware to parse JSON
 
 function calculate4SFastballGrade(velocity, inducedVerticalBreak, horizontalBreak, spinRate, releaseHeight, extension, verticalApproachAngle) {
-  const finalScores = [];
+  finalScores = [];
   // Define the weight and range for each metric
   const metrics = [
     { value: velocity, 
@@ -97,6 +97,7 @@ function calculate4SFastballGrade(velocity, inducedVerticalBreak, horizontalBrea
     const metricValue = calculateMetricValue(metric.value, metric.range);
     console.log(metric.weight + ' : ' + metricValue);
     finalScores.push(metricValue);
+    console.log(finalScores);
     return metric.weight * metricValue;
   });
 
@@ -116,7 +117,6 @@ app.get('/', (req, res) => {
 
 app.post('/gradePitch', (req, res) => {
   const pitchMetrics = req.body;
-  finalScores = [];
 
   // Assuming a sample pitch grade for demonstration
   const pitchGrade = calculate4SFastballGrade(
@@ -135,6 +135,7 @@ app.post('/gradePitch', (req, res) => {
 app.post('/getScores', (req, res) => {
   // Send back the finalScores array
   res.json({ finalScores });
+  console.log(finalScores);
 });
 
 app.listen(PORT, () => {

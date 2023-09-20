@@ -20,7 +20,7 @@ const pitchTypes = [
 
 const handOptions = ['RH', 'LH'];  // Hand options
 
-const PitchInputForm = () => {
+const PitchInputForm = ({ onSubmit }) => {
   const [metrics, setMetrics] = useState({
     pitchType: '',
     hand: '',
@@ -51,6 +51,8 @@ const PitchInputForm = () => {
     } catch (error) {
       console.error('Error calculating pitch grade:', error);
     }
+    // Call the parent's handleSubmit function
+    onSubmit();
   };
 
   return (

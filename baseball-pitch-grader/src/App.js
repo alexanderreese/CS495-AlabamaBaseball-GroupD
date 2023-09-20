@@ -4,12 +4,17 @@ import PitchInputForm from './components/PitchInputForm';  // Import your PitchI
 import './components/PitchInputForm.css';  // Import the CSS file for styling
 import SettingsPage from './components/SettingsPage';  // Import your SettingsPage component
 import LineGraph from './components/LineGraph'; 
+import axios from 'axios';
 
 const App = () => {
-  const [graphData, setGraphData] = useState([]);
+  const [graphData, setGraphData] = useState([0,0,0,0,0,0,0]);
 
-  const updateGraphData = (data) => {
-    setGraphData(data);
+  const handleSubmit = async () => {
+    // Assuming you update the graphData after fetching data
+    const fetchedData = await axios.post('http://localhost:5000/getScores');
+    const temp = fetchedData.data.finalScores;
+    setGraphData(temp);
+    console.log(graphData);
   };
 
   return (
@@ -17,10 +22,10 @@ const App = () => {
       <h1>Baseball Pitch Grader</h1>
       <div className="container">
         <div className="inputForm">
-          <PitchInputForm />
+          <PitchInputForm onSubmit={handleSubmit} />
         </div>
         <div className="graphContainer">
-          <LineGraph updateGraphData={updateGraphData} />
+          <LineGraph updateGraphData={graphData} />
         </div>
       </div>
     </div>

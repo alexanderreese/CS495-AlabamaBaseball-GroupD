@@ -8,7 +8,7 @@ const generateLineGraphData = (inputLabels, scores1, scores2) => {
     labels: inputLabels,
     datasets: [
       {
-        label: 'Scores 1',
+        label: 'Player Scores',
         data: scores1,
         borderColor: 'blue',
         backgroundColor: 'rgba(0, 0, 255, 0.3)',
@@ -17,7 +17,7 @@ const generateLineGraphData = (inputLabels, scores1, scores2) => {
         pointHoverRadius: 7,
       },
       {
-        label: 'Scores 2',
+        label: 'Average Scores',
         data: scores2,
         borderColor: 'red',
         backgroundColor: 'rgba(255, 0, 0, 0.3)',
@@ -30,23 +30,16 @@ const generateLineGraphData = (inputLabels, scores1, scores2) => {
 };
 
 const LineGraph = ({ updateGraphData }) => {
+  console.log("Passed data: ", updateGraphData)
   const [scores1, setScores1] = useState([]);
-  const inputLabels = ['Input 1', 'Input 2', 'Input 3', 'Input 4', 'Input 5', 'Input 6', 'Input 7']; // Update with your input labels
-  const scores2 = [5, 5, 5, 5, 5, 5, 5]; // Update with your scores for line 2
+  const inputLabels = ['Velocity', 'Ind. Vert Break', 'Horz Break', 'Spin Rate', 'RelHeight', 'Extension', 'Vert App Angle']; // Update with your input labels
+  const scores2 = [5, 5, 7, 0, 5, 5, 2]; // Update with your scores for line 2
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.post('http://localhost:5000/getScores');
-        setScores1(response.data.finalScores);
-        updateGraphData(response.data.finalScores); // Call the update function
-      } catch (error) {
-        console.error('Error populating graph:', error);
-      }
-    };
-
-    fetchData();
-  }, []); // Empty dependency array ensures this effect runs once, like componentDidMount
+    console.log('updateGraphData:', updateGraphData); // Log the data
+    setScores1(updateGraphData);
+  }, [updateGraphData]); // Empty dependency array ensures this effect runs once, like componentDidMount
+  
   const data = generateLineGraphData(inputLabels, scores1, scores2);
 
   const options = {
