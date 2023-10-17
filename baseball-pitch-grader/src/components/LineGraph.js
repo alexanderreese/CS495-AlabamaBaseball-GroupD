@@ -32,14 +32,28 @@ const generateLineGraphData = (inputLabels, scores1, scores2) => {
 const LineGraph = ({ updateGraphData }) => {
   console.log("Passed data: ", updateGraphData)
   const [scores1, setScores1] = useState([]);
+  const [scores2, setScores2] = useState([]);
   const inputLabels = ['Velocity', 'Ind. Vert Break', 'Horz Break', 'Spin Rate', 'RelHeight', 'Extension', 'Vert App Angle']; // Update with your input labels
-  const scores2 = [5, 5, 7, 0, 5, 5, 2]; // Update with your scores for line 2
 
+  
   useEffect(() => {
     console.log('updateGraphData:', updateGraphData); // Log the data
     setScores1(updateGraphData);
   }, [updateGraphData]); // Empty dependency array ensures this effect runs once, like componentDidMount
   
+  useEffect(() => {
+    const updateScores = async () => {
+      try {
+        const fetchedData = await axios.post('http://localhost:5000/getAverages');
+        const scores = fetchedData.data.finalScores;
+        setScores2(scores);
+      } catch (error) {
+        console.error('Error fetching scores:', error);
+      }
+    }; 
+    updateScores();
+  }, [updateGraphData]); // Only re-run the effect if updateGraphData changes
+
   const data = generateLineGraphData(inputLabels, scores1, scores2);
 
   const options = {
