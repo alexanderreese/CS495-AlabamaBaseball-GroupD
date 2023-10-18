@@ -57,3 +57,12 @@ label {
 .btn-primary:hover {
   background-color: #0056b3;
 }
+
+.smaller-score-box {
+  width: 40px; 
+  margin-left: 5px;
+}
+
+.score-group { 
+  margin-left: 30px;
+}

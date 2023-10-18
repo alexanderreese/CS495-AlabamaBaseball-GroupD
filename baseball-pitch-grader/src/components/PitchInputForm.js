@@ -21,6 +21,8 @@ const pitchTypes = [
 const handOptions = ['RH', 'LH'];  // Hand options
 
 const PitchInputForm = ({ onSubmit }) => {
+  const [score, setScore] = useState();
+
   const [metrics, setMetrics] = useState({
     pitchType: '',
     hand: '',
@@ -43,10 +45,11 @@ const PitchInputForm = ({ onSubmit }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // TODO: Handle form submission (e.g., send metrics to the server for grading)
+
     console.log('Form submitted with metrics:', metrics);
     try {
       const response = await axios.post('http://localhost:5000/gradePitch', metrics);
+      setScore(response.data.pitchGrade);
       console.log('PitchGrade: ' + response.data.pitchGrade);
     } catch (error) {
       console.error('Error calculating pitch grade:', error);
@@ -121,7 +124,24 @@ const PitchInputForm = ({ onSubmit }) => {
           <input type="number" name="verticalApproachAngle" value={metrics.verticalApproachAngle} onChange={handleInputChange} className="form-control" />
         </label>
       </div>
+      <div className="container">
       <button type="submit" className="btn btn-primary">Grade Pitch</button>
+      {/* Display the score */}
+    {score !== null && (
+      <div className="score-group">
+        <label>
+          Score:
+          <input
+            type="text"
+            name="score"
+            value={score}
+            readOnly
+            className="form-control smaller-score-box"
+          />
+        </label>
+      </div>
+    )}
+    </div>
     </form>
   );
 };
