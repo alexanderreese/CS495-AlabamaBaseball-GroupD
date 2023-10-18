@@ -1,36 +1,28 @@
-//import React from 'react';
 import React, { useState } from 'react';
-import PitchInputForm from './components/PitchInputForm';  // Import your PitchInputForm component
-import './components/PitchInputForm.css';  // Import the CSS file for styling
-import SettingsPage from './components/SettingsPage';  // Import your SettingsPage component
-import LineGraph from './components/LineGraph'; 
+import './styles.css';
+import Spreadsheet from './components/Spreadsheet.js';
+import InputForm from './components/InputForm.js';
 import axios from 'axios';
 
 const App = () => {
-  const [graphData, setGraphData] = useState([0,0,0,0,0,0,0]);
+  const [columns, setColumns] = useState([
+    'Column 1', 'Column 2', 'Column 3', 'Column 4', 'Column 5',
+    'Column 6', 'Column 7', 'Column 8', 'Column 9'
+  ]);
 
-  const handleSubmit = async () => {
-    // Assuming you update the graphData after fetching data
-    const fetchedData = await axios.post('http://localhost:5000/getScores');
-    const temp = fetchedData.data.finalScores;
-    setGraphData(temp);
-    console.log(graphData);
+  const [rows, setRows] = useState([]);
+
+  const handleAddRow = (rowData) => {
+    setRows([...rows, rowData]);
   };
 
   return (
-    <div className="title">
+    <div className="App">
       <h1>Baseball Pitch Grader</h1>
-      <div className="container">
-        <div className="inputForm">
-          <PitchInputForm onSubmit={handleSubmit} />
-        </div>
-        <div className="graphContainer">
-          <LineGraph updateGraphData={graphData} />
-        </div>
-      </div>
+      <InputForm columns={columns} onAddRow={handleAddRow} />
+      <Spreadsheet columns={columns} rows={rows} />
     </div>
   );
-}
+};
 
 export default App;
-
