@@ -1,0 +1,1318 @@
+{
+    "RH_4S_Fastball": {
+        "weight": {
+            "velocity": 1.75,
+            "induced_vertical_break": 1,
+            "horizontal_break": 0.5,
+            "spin_rate": 0.15,
+            "release_height": 0.75,
+            "extension": 0.5,
+            "vertical_approach_angle": 0.35
+        },
+        "min": {
+            "velocity": 80.0,
+            "induced_vertical_break": 13,
+            "horizontal_break": 4,
+            "spin_rate": 1800,
+            "release_height": 5,
+            "extension": 5.4,
+            "vertical_approach_angle": -6.8
+        },
+        "max": {
+            "velocity": 100,
+            "induced_vertical_break": 23,
+            "horizontal_break": 19,
+            "spin_rate": 2600,
+            "release_height": 7,
+            "extension": 6.7,
+            "vertical_approach_angle": -5
+        },
+        "target": {
+            "velocity": 90,
+            "induced_vertical_break": 18,
+            "horizontal_break": 9,
+            "spin_rate": 2240,
+            "release_height": 6,
+            "extension": 6,
+            "vertical_approach_angle": -5.2
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "max",
+            "horizontal_break": "target",
+            "spin_rate": "max",
+            "release_height": "min",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "LH_4S_Fastball": {
+        "weight": {
+            "velocity": 1.75,
+            "induced_vertical_break": 1,
+            "horizontal_break": 0.5,
+            "spin_rate": 0.15,
+            "release_height": 0.75,
+            "extension": 0.5,
+            "vertical_approach_angle": 0.35
+        },
+        "min": {
+            "velocity": 79,
+            "induced_vertical_break": 13,
+            "horizontal_break": -19,
+            "spin_rate": 1800,
+            "release_height": 5,
+            "extension": 5.4,
+            "vertical_approach_angle": -6.8
+        },
+        "max": {
+            "velocity": 99,
+            "induced_vertical_break": 23,
+            "horizontal_break": -4,
+            "spin_rate": 2600,
+            "release_height": 7,
+            "extension": 6.7,
+            "vertical_approach_angle": -4
+        },
+        "target": {
+            "velocity": 89,
+            "induced_vertical_break": 18,
+            "horizontal_break": -9,
+            "spin_rate": 2240,
+            "release_height": 6,
+            "extension": 6,
+            "vertical_approach_angle": -5.2
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "max",
+            "horizontal_break": "target",
+            "spin_rate": "max",
+            "release_height": "min",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "RH_2S_Fastball": {
+        "weight": {
+            "velocity": 1.5,
+            "induced_vertical_break": 0.75,
+            "horizontal_break": 1.25,
+            "spin_rate": 0.25,
+            "release_height": 0.5,
+            "extension": 0.5,
+            "vertical_approach_angle": 0.25
+        },
+        "min": {
+            "velocity": 81,
+            "induced_vertical_break": 8,
+            "horizontal_break": 8,
+            "spin_rate": 1750,
+            "release_height": 5.5,
+            "extension": 4.8,
+            "vertical_approach_angle": -6.5
+        },
+        "max": {
+            "velocity": 101,
+            "induced_vertical_break": 18,
+            "horizontal_break": 20,
+            "spin_rate": 2550,
+            "release_height": 6.6,
+            "extension": 6.8,
+            "vertical_approach_angle": -5
+        },
+        "target": {
+            "velocity": 91,
+            "induced_vertical_break": 13,
+            "horizontal_break": 16,
+            "spin_rate": 2200,
+            "release_height": 5.7,
+            "extension": 5.8,
+            "vertical_approach_angle": -5.5
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "min",
+            "horizontal_break": "max",
+            "spin_rate": "max",
+            "release_height": "max",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "LH_2S_Fastball": {
+        "weight": {
+            "velocity": 1.5,
+            "induced_vertical_break": 0.75,
+            "horizontal_break": 1.25,
+            "spin_rate": 0.25,
+            "release_height": 0.5,
+            "extension": 0.5,
+            "vertical_approach_angle": 0.25
+        },
+        "min": {
+            "velocity": 80,
+            "induced_vertical_break": 8,
+            "horizontal_break": -20,
+            "spin_rate": 2550,
+            "release_height": 5.5,
+            "extension": 4.8,
+            "vertical_approach_angle": -6.5
+        },
+        "max": {
+            "velocity": 100,
+            "induced_vertical_break": 18,
+            "horizontal_break": -8,
+            "spin_rate": 2550,
+            "release_height": 6.6,
+            "extension": 6.8,
+            "vertical_approach_angle": 10
+        },
+        "target": {
+            "velocity": 90,
+            "induced_vertical_break": 13,
+            "horizontal_break": -16,
+            "spin_rate": 2200,
+            "release_height": 5.7,
+            "extension": 5.8,
+            "vertical_approach_angle": -5.5
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "min",
+            "horizontal_break": "min",
+            "spin_rate": "max",
+            "release_height": "max",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "RH_SI_Fastball": {
+        "weight": {
+            "velocity": 1.5,
+            "induced_vertical_break": 1.5,
+            "horizontal_break": 0.5,
+            "spin_rate": 0.15,
+            "release_height": 0.5,
+            "extension": 0.35,
+            "vertical_approach_angle": 0.5
+        },
+        "min": {
+            "velocity": 80,
+            "induced_vertical_break": 0,
+            "horizontal_break": 10,
+            "spin_rate": 1850,
+            "release_height": 5,
+            "extension": 4.8,
+            "vertical_approach_angle": -6.5
+        },
+        "max": {
+            "velocity": 100,
+            "induced_vertical_break": 20,
+            "horizontal_break": 22,
+            "spin_rate": 2450,
+            "release_height": 6.5,
+            "extension": 6.8,
+            "vertical_approach_angle": -5
+        },
+        "target": {
+            "velocity": 90,
+            "induced_vertical_break": 11,
+            "horizontal_break": 16,
+            "spin_rate": 2200,
+            "release_height": 5.6,
+            "extension": 5.8,
+            "vertical_approach_angle": -5.7
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "min",
+            "horizontal_break": "max",
+            "spin_rate": "min",
+            "release_height": "max",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "LH_SI_Fastball": {
+        "weight": {
+            "velocity": 1.5,
+            "induced_vertical_break": 1.5,
+            "horizontal_break": 0.5,
+            "spin_rate": 0.15,
+            "release_height": 0.5,
+            "extension": 0.35,
+            "vertical_approach_angle": 0.5
+        },
+        "min": {
+            "velocity": 79,
+            "induced_vertical_break": 0,
+            "horizontal_break": -22,
+            "spin_rate": 1850,
+            "release_height": 5,
+            "extension": 4.8,
+            "vertical_approach_angle": -6.5
+        },
+        "max": {
+            "velocity": 99,
+            "induced_vertical_break": 20,
+            "horizontal_break": -16,
+            "spin_rate": 2450,
+            "release_height": 6.5,
+            "extension": 6.8,
+            "vertical_approach_angle": -5
+        },
+        "target": {
+            "velocity": 89,
+            "induced_vertical_break": 11,
+            "horizontal_break": -16,
+            "spin_rate": 2200,
+            "release_height": 5.6,
+            "extension": 5.8,
+            "vertical_approach_angle": -5.7
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "min",
+            "horizontal_break": "min",
+            "spin_rate": "min",
+            "release_height": "max",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "RH_CT_Fastball": {
+        "weight": {
+            "velocity": 1.5,
+            "induced_vertical_break": 0.9,
+            "horizontal_break": 1.4,
+            "spin_rate": 0.15,
+            "release_height": 0.35,
+            "extension": 0.35,
+            "vertical_approach_angle": 0.35
+        },
+        "min": {
+            "velocity": 79,
+            "induced_vertical_break": 8,
+            "horizontal_break": -2,
+            "spin_rate": 1975,
+            "release_height": 5.8,
+            "extension": 4.8,
+            "vertical_approach_angle": -6.5
+        },
+        "max": {
+            "velocity": 99,
+            "induced_vertical_break": 22,
+            "horizontal_break": 8,
+            "spin_rate": 2575,
+            "release_height": 6.6,
+            "extension": 6.8,
+            "vertical_approach_angle": -5
+        },
+        "target": {
+            "velocity": 89,
+            "induced_vertical_break": 15,
+            "horizontal_break": 3,
+            "spin_rate": 2275,
+            "release_height": 5.9,
+            "extension": 5.8,
+            "vertical_approach_angle": -5.6
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "max",
+            "horizontal_break": "min",
+            "spin_rate": "max",
+            "release_height": "max",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "LH_CT_Fastball": {
+        "weight": {
+            "velocity": 1.5,
+            "induced_vertical_break": 0.9,
+            "horizontal_break": 1.4,
+            "spin_rate": 0.15,
+            "release_height": 0.35,
+            "extension": 0.35,
+            "vertical_approach_angle": 0.35
+        },
+        "min": {
+            "velocity": 77,
+            "induced_vertical_break": 7,
+            "horizontal_break": -8,
+            "spin_rate": 1975,
+            "release_height": 5.4,
+            "extension": 4.8,
+            "vertical_approach_angle": -6.5
+        },
+        "max": {
+            "velocity": 97,
+            "induced_vertical_break": 21,
+            "horizontal_break": 2,
+            "spin_rate": 2575,
+            "release_height": 6.6,
+            "extension": 6.8,
+            "vertical_approach_angle": -5
+        },
+        "target": {
+            "velocity": 87,
+            "induced_vertical_break": 14,
+            "horizontal_break": -3,
+            "spin_rate": 2275,
+            "release_height": 5.9,
+            "extension": 5.8,
+            "vertical_approach_angle": -5.6
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "max",
+            "horizontal_break": "min",
+            "spin_rate": "max",
+            "release_height": "max",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "RH_Cutter": {
+        "weight": {
+            "velocity": 1.4,
+            "induced_vertical_break": 1.2,
+            "horizontal_break": 1.2,
+            "spin_rate": 0.15,
+            "release_height": 0.35,
+            "extension": 0.35,
+            "vertical_approach_angle": 0.35
+        },
+        "min": {
+            "velocity": 76,
+            "induced_vertical_break": 5,
+            "horizontal_break": -8,
+            "spin_rate": 2000,
+            "release_height": 5.4,
+            "extension": 4.9,
+            "vertical_approach_angle": -7
+        },
+        "max": {
+            "velocity": 96,
+            "induced_vertical_break": 17,
+            "horizontal_break": 5,
+            "spin_rate": 2600,
+            "release_height": 6.6,
+            "extension": 6.9,
+            "vertical_approach_angle": -4.5
+        },
+        "target": {
+            "velocity": 86,
+            "induced_vertical_break": 10,
+            "horizontal_break": -2,
+            "spin_rate": 2325,
+            "release_height": 5.9,
+            "extension": 5.9,
+            "vertical_approach_angle": -6
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "target",
+            "horizontal_break": "target",
+            "spin_rate": "max",
+            "release_height": "max",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "LH_Cutter": {
+        "weight": {
+            "velocity": 1.4,
+            "induced_vertical_break": 1.2,
+            "horizontal_break": 1.2,
+            "spin_rate": 0.15,
+            "release_height": 0.35,
+            "extension": 0.35,
+            "vertical_approach_angle": 0.35
+        },
+        "min": {
+            "velocity": 75,
+            "induced_vertical_break": 5,
+            "horizontal_break": -5,
+            "spin_rate": 2000,
+            "release_height": 5.4,
+            "extension": 4.9,
+            "vertical_approach_angle": -7
+        },
+        "max": {
+            "velocity": 95,
+            "induced_vertical_break": 17,
+            "horizontal_break": 8,
+            "spin_rate": 2600,
+            "release_height": 6.6,
+            "extension": 6.9,
+            "vertical_approach_angle": -4.5
+        },
+        "target": {
+            "velocity": 85,
+            "induced_vertical_break": 10,
+            "horizontal_break": 2,
+            "spin_rate": 2325,
+            "release_height": 5.9,
+            "extension": 5.9,
+            "vertical_approach_angle": -6
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "target",
+            "horizontal_break": "target",
+            "spin_rate": "max",
+            "release_height": "max",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "RH_Gyro_Slider": {
+        "weight": {
+            "velocity": 2,
+            "induced_vertical_break": 1.2,
+            "horizontal_break": 1.2,
+            "spin_rate": 0.1,
+            "release_height": 0.3,
+            "extension": 0.1,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 77,
+            "induced_vertical_break": -5,
+            "horizontal_break": -5,
+            "spin_rate": 2000,
+            "release_height": 5,
+            "extension": 6.5,
+            "vertical_approach_angle": -9
+        },
+        "max": {
+            "velocity": 89,
+            "induced_vertical_break": 5,
+            "horizontal_break": 5,
+            "spin_rate": 2600,
+            "release_height": 6.6,
+            "extension": 6.5,
+            "vertical_approach_angle": -7
+        },
+        "target": {
+            "velocity": 83,
+            "induced_vertical_break": 1,
+            "horizontal_break": -1.5,
+            "spin_rate": 2300,
+            "release_height": 5.8,
+            "extension": 5.5,
+            "vertical_approach_angle": -8
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "target",
+            "horizontal_break": "target",
+            "spin_rate": "max",
+            "release_height": "min",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "LH_Gyro_Slider": {
+        "weight": {
+            "velocity": 2,
+            "induced_vertical_break": 1.2,
+            "horizontal_break": 1.2,
+            "spin_rate": 0.1,
+            "release_height": 0.3,
+            "extension": 0.1,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 75,
+            "induced_vertical_break": -5,
+            "horizontal_break": -5,
+            "spin_rate": 2000,
+            "release_height": 5,
+            "extension": 4.5,
+            "vertical_approach_angle": -9
+        },
+        "max": {
+            "velocity": 87,
+            "induced_vertical_break": 5,
+            "horizontal_break": 5,
+            "spin_rate": 2600,
+            "release_height": 6.6,
+            "extension": 6.5,
+            "vertical_approach_angle": -7
+        },
+        "target": {
+            "velocity": 81,
+            "induced_vertical_break": 1,
+            "horizontal_break": 1.5,
+            "spin_rate": 2300,
+            "release_height": 5.8,
+            "extension": 5.5,
+            "vertical_approach_angle": -8
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "target",
+            "horizontal_break": "target",
+            "spin_rate": "max",
+            "release_height": "min",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "RH_Slider": {
+        "weight": {
+            "velocity": 1.75,
+            "induced_vertical_break": 1,
+            "horizontal_break": 1.3,
+            "spin_rate": 0.5,
+            "release_height": 0.25,
+            "extension": 0.1,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 74,
+            "induced_vertical_break": -7,
+            "horizontal_break": -8,
+            "spin_rate": 2075,
+            "release_height": 5.1,
+            "extension": 4.5,
+            "vertical_approach_angle": -8.5
+        },
+        "max": {
+            "velocity": 88,
+            "induced_vertical_break": 7,
+            "horizontal_break": -3,
+            "spin_rate": 2675,
+            "release_height": 6.5,
+            "extension": 6.5,
+            "vertical_approach_angle": 8.5
+        },
+        "target": {
+            "velocity": 81,
+            "induced_vertical_break": 2,
+            "horizontal_break": -6,
+            "spin_rate": 2375,
+            "release_height": 5.7,
+            "extension": 5.5,
+            "vertical_approach_angle": -7.5
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "target",
+            "horizontal_break": "target",
+            "spin_rate": "max",
+            "release_height": "edge",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "LH_Slider": {
+        "weight": {
+            "velocity": 1.75,
+            "induced_vertical_break": 1,
+            "horizontal_break": 1.3,
+            "spin_rate": 0.5,
+            "release_height": 0.25,
+            "extension": 0.1,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 72,
+            "induced_vertical_break": -7,
+            "horizontal_break": 3,
+            "spin_rate": 2075,
+            "release_height": 5.1,
+            "extension": 4.5,
+            "vertical_approach_angle": -8.5
+        },
+        "max": {
+            "velocity": 86,
+            "induced_vertical_break": 6,
+            "horizontal_break": 8,
+            "spin_rate": 2675,
+            "release_height": 6.5,
+            "extension": 6.5,
+            "vertical_approach_angle": -6.5
+        },
+        "target": {
+            "velocity": 79,
+            "induced_vertical_break": 2,
+            "horizontal_break": 6,
+            "spin_rate": 2375,
+            "release_height": 5.7,
+            "extension": 5.5,
+            "vertical_approach_angle": -7.5
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "target",
+            "horizontal_break": "target",
+            "spin_rate": "max",
+            "release_height": "max",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "RH_Slutter": {
+        "weight": {
+            "velocity": 1.3,
+            "induced_vertical_break": 1.5,
+            "horizontal_break": 1.5,
+            "spin_rate": 0.25,
+            "release_height": 0.25,
+            "extension": 0.1,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 75,
+            "induced_vertical_break": 2,
+            "horizontal_break": -10,
+            "spin_rate": 2700,
+            "release_height": 5.1,
+            "extension": 4.6,
+            "vertical_approach_angle": -8.5
+        },
+        "max": {
+            "velocity": 89,
+            "induced_vertical_break": 10,
+            "horizontal_break": -2,
+            "spin_rate": 2000,
+            "release_height": 6.5,
+            "extension": 6.6,
+            "vertical_approach_angle": -5.5
+        },
+        "target": {
+            "velocity": 82,
+            "induced_vertical_break": 6,
+            "horizontal_break": -6,
+            "spin_rate": 2350,
+            "release_height": 5.6,
+            "extension": 5.6,
+            "vertical_approach_angle": -7
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "max",
+            "horizontal_break": "min",
+            "spin_rate": "max",
+            "release_height": "edge",
+            "extension": "max",
+            "vertical_approach_angle": "edge"
+        }
+    },
+    "LH_Slutter": {
+        "weight": {
+            "velocity": 1.3,
+            "induced_vertical_break": 1.5,
+            "horizontal_break": 1.5,
+            "spin_rate": 0.25,
+            "release_height": 0.25,
+            "extension": 0.1,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 75,
+            "induced_vertical_break": 2,
+            "horizontal_break": 2,
+            "spin_rate": 2000,
+            "release_height": 5.1,
+            "extension": 4.6,
+            "vertical_approach_angle": -8.5
+        },
+        "max": {
+            "velocity": 89,
+            "induced_vertical_break": 10,
+            "horizontal_break": 10,
+            "spin_rate": 2700,
+            "release_height": 6.5,
+            "extension": 6.6,
+            "vertical_approach_angle": -5.5
+        },
+        "target": {
+            "velocity": 82,
+            "induced_vertical_break": 6,
+            "horizontal_break": 6,
+            "spin_rate": 2350,
+            "release_height": 5.6,
+            "extension": 5.6,
+            "vertical_approach_angle": -7
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "max",
+            "horizontal_break": "max",
+            "spin_rate": "max",
+            "release_height": "edge",
+            "extension": "max",
+            "vertical_approach_angle": "max"
+        }
+    },
+    "RH_Sweeper": {
+        "weight": {
+            "velocity": 1.5,
+            "induced_vertical_break": 1,
+            "horizontal_break": 1.6,
+            "spin_rate": 0.2,
+            "release_height": 0.5,
+            "extension": 0.1,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 69,
+            "induced_vertical_break": -6,
+            "horizontal_break": -12,
+            "spin_rate": 1950,
+            "release_height": 5,
+            "extension": 4.3,
+            "vertical_approach_angle": -9
+        },
+        "max": {
+            "velocity": 89,
+            "induced_vertical_break": 6,
+            "horizontal_break": -6,
+            "spin_rate": 2950,
+            "release_height": 6.5,
+            "extension": 6.3,
+            "vertical_approach_angle": -7
+        },
+        "target": {
+            "velocity": 79,
+            "induced_vertical_break": 0,
+            "horizontal_break": -10,
+            "spin_rate": 2450,
+            "release_height": 5.5,
+            "extension": 5.3,
+            "vertical_approach_angle": -8
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "target",
+            "horizontal_break": "min",
+            "spin_rate": "max",
+            "release_height": "max",
+            "extension": "max",
+            "vertical_approach_angle": "max"
+        }
+    },
+    "LH_Sweeper": {
+        "weight": {
+            "velocity": 1.5,
+            "induced_vertical_break": 1,
+            "horizontal_break": 1.6,
+            "spin_rate": 0.2,
+            "release_height": 0.5,
+            "extension": 0.1,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 67,
+            "induced_vertical_break": -6,
+            "horizontal_break": 6,
+            "spin_rate": 1950,
+            "release_height": 5,
+            "extension": 4.3,
+            "vertical_approach_angle": -9
+        },
+        "max": {
+            "velocity": 87,
+            "induced_vertical_break": 6,
+            "horizontal_break": 12,
+            "spin_rate": 2950,
+            "release_height": 6.5,
+            "extension": 6.3,
+            "vertical_approach_angle": -7
+        },
+        "target": {
+            "velocity": 77,
+            "induced_vertical_break": 0,
+            "horizontal_break": 10,
+            "spin_rate": 2450,
+            "release_height": 5.5,
+            "extension": 5.3,
+            "vertical_approach_angle": -8
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "target",
+            "horizontal_break": "max",
+            "spin_rate": "max",
+            "release_height": "max",
+            "extension": "max",
+            "vertical_approach_angle": "max"
+        }
+    },
+    "RH_Slurve": {
+        "weight": {
+            "velocity": 1.75,
+            "induced_vertical_break": 1.2,
+            "horizontal_break": 1.2,
+            "spin_rate": 0.4,
+            "release_height": 0.25,
+            "extension": 0.1,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 73,
+            "induced_vertical_break": -15,
+            "horizontal_break": 5,
+            "spin_rate": 2050,
+            "release_height": 5,
+            "extension": 4.3,
+            "vertical_approach_angle": -10
+        },
+        "max": {
+            "velocity": 85,
+            "induced_vertical_break": -3,
+            "horizontal_break": 6.8,
+            "spin_rate": 2850,
+            "release_height": 6.8,
+            "extension": 6.3,
+            "vertical_approach_angle": -8
+        },
+        "target": {
+            "velocity": 79,
+            "induced_vertical_break": -7,
+            "horizontal_break": -10,
+            "spin_rate": 2450,
+            "release_height": 5.8,
+            "extension": 5.3,
+            "vertical_approach_angle": -9
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "min",
+            "horizontal_break": "min",
+            "spin_rate": "max",
+            "release_height": "max",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "LH_Slurve": {
+        "weight": {
+            "velocity": 1.75,
+            "induced_vertical_break": 1.2,
+            "horizontal_break": 1.2,
+            "spin_rate": 0.4,
+            "release_height": 0.25,
+            "extension": 0.1,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 71,
+            "induced_vertical_break": -15,
+            "horizontal_break": 3,
+            "spin_rate": 2050,
+            "release_height": 5,
+            "extension": 4.3,
+            "vertical_approach_angle": -10
+        },
+        "max": {
+            "velocity": 83,
+            "induced_vertical_break": -3,
+            "horizontal_break": 14,
+            "spin_rate": 2850,
+            "release_height": 6.8,
+            "extension": 6.3,
+            "vertical_approach_angle": -8
+        },
+        "target": {
+            "velocity": 77,
+            "induced_vertical_break": -7,
+            "horizontal_break": -10,
+            "spin_rate": 2450,
+            "release_height": 5.8,
+            "extension": 5.3,
+            "vertical_approach_angle": -9
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "min",
+            "horizontal_break": "max",
+            "spin_rate": "max",
+            "release_height": "max",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "RH_12_6": {
+        "weight": {
+            "velocity": 1.75,
+            "induced_vertical_break": 1.5,
+            "horizontal_break": 1,
+            "spin_rate": 0.3,
+            "release_height": 0.25,
+            "extension": 0.1,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 72,
+            "induced_vertical_break": -17,
+            "horizontal_break": -10,
+            "spin_rate": 2000,
+            "release_height": 5.9,
+            "extension": 4.3,
+            "vertical_approach_angle": -11
+        },
+        "max": {
+            "velocity": 84,
+            "induced_vertical_break": -2,
+            "horizontal_break": 0,
+            "spin_rate": 2750,
+            "release_height": 6.7,
+            "extension": 6.3,
+            "vertical_approach_angle": -9
+        },
+        "target": {
+            "velocity": 78,
+            "induced_vertical_break": -11,
+            "horizontal_break": -4,
+            "spin_rate": 2350,
+            "release_height": 6.1,
+            "extension": 5.3,
+            "vertical_approach_angle": -10
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "min",
+            "horizontal_break": "target",
+            "spin_rate": "max",
+            "release_height": "min",
+            "extension": "max",
+            "vertical_approach_angle": "edge"
+        }
+    },
+    "LH_12_6": {
+        "weight": {
+            "velocity": 1.75,
+            "induced_vertical_break": 1.5,
+            "horizontal_break": 1,
+            "spin_rate": 0.3,
+            "release_height": 0.25,
+            "extension": 0.1,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 70,
+            "induced_vertical_break": -17,
+            "horizontal_break": 6,
+            "spin_rate": 1950,
+            "release_height": 5.9,
+            "extension": 4.3,
+            "vertical_approach_angle": -11
+        },
+        "max": {
+            "velocity": 82,
+            "induced_vertical_break": -2,
+            "horizontal_break": 10,
+            "spin_rate": 2750,
+            "release_height": 6.7,
+            "extension": 6.3,
+            "vertical_approach_angle": -9
+        },
+        "target": {
+            "velocity": 76,
+            "induced_vertical_break": -11,
+            "horizontal_break": 4,
+            "spin_rate": 2350,
+            "release_height": 6.1,
+            "extension": 5.3,
+            "vertical_approach_angle": -10
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "min",
+            "horizontal_break": "target",
+            "spin_rate": "max",
+            "release_height": "min",
+            "extension": "max",
+            "vertical_approach_angle": "edge"
+        }
+    },
+    "RH_Traditional_CH": {
+        "weight": {
+            "velocity": 1.35,
+            "induced_vertical_break": 1.6,
+            "horizontal_break": 1.35,
+            "spin_rate": 0.25,
+            "release_height": 0.1,
+            "extension": 0.25,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 76,
+            "induced_vertical_break": 9,
+            "horizontal_break": 9,
+            "spin_rate": 1750,
+            "release_height": 5.2,
+            "extension": 5,
+            "vertical_approach_angle": -7
+        },
+        "max": {
+            "velocity": 90,
+            "induced_vertical_break": 17,
+            "horizontal_break": 17,
+            "spin_rate": 2350,
+            "release_height": 6.4,
+            "extension": 7,
+            "vertical_approach_angle": -6
+        },
+        "target": {
+            "velocity": 83,
+            "induced_vertical_break": 13,
+            "horizontal_break": 13,
+            "spin_rate": 1850,
+            "release_height": 5.8,
+            "extension": 6,
+            "vertical_approach_angle": -6.5
+        },
+        "goal": {
+            "velocity": "target",
+            "induced_vertical_break": "min",
+            "horizontal_break": "max",
+            "spin_rate": "min",
+            "release_height": "edge",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "LH_Traditional_CH": {
+        "weight": {
+            "velocity": 1.35,
+            "induced_vertical_break": 1.6,
+            "horizontal_break": 1.35,
+            "spin_rate": 0.25,
+            "release_height": 0.1,
+            "extension": 0.25,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 74,
+            "induced_vertical_break": 9,
+            "horizontal_break": -17,
+            "spin_rate": 1750,
+            "release_height": 5.2,
+            "extension": 5,
+            "vertical_approach_angle": -7
+        },
+        "max": {
+            "velocity": 87,
+            "induced_vertical_break": 17,
+            "horizontal_break": -9,
+            "spin_rate": 2350,
+            "release_height": 6.4,
+            "extension": 7,
+            "vertical_approach_angle": -6
+        },
+        "target": {
+            "velocity": 81,
+            "induced_vertical_break": 13,
+            "horizontal_break": -13,
+            "spin_rate": 1850,
+            "release_height": 5.8,
+            "extension": 6,
+            "vertical_approach_angle": -6.5
+        },
+        "goal": {
+            "velocity": "target",
+            "induced_vertical_break": "min",
+            "horizontal_break": "min",
+            "spin_rate": "min",
+            "release_height": "edge",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "RH_Sidespin_CH": {
+        "weight": {
+            "velocity": 1.3,
+            "induced_vertical_break": 1.5,
+            "horizontal_break": 1.5,
+            "spin_rate": 0.1,
+            "release_height": 0.25,
+            "extension": 0.25,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 75,
+            "induced_vertical_break": 3,
+            "horizontal_break": 10,
+            "spin_rate": 1900,
+            "release_height": 5.1,
+            "extension": 4.9,
+            "vertical_approach_angle": -8
+        },
+        "max": {
+            "velocity": 89,
+            "induced_vertical_break": 13,
+            "horizontal_break": 17,
+            "spin_rate": 1700,
+            "release_height": 6.3,
+            "extension": 6.9,
+            "vertical_approach_angle": -6
+        },
+        "target": {
+            "velocity": 82,
+            "induced_vertical_break": 5,
+            "horizontal_break": 16,
+            "spin_rate": 1800,
+            "release_height": 5.3,
+            "extension": 5.9,
+            "vertical_approach_angle": -7
+        },
+        "goal": {
+            "velocity": "target",
+            "induced_vertical_break": "min",
+            "horizontal_break": "max",
+            "spin_rate": "none",
+            "release_height": "max",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "LH_Sidespin_CH": {
+        "weight": {
+            "velocity": 1.3,
+            "induced_vertical_break": 1.5,
+            "horizontal_break": 1.5,
+            "spin_rate": 0.1,
+            "release_height": 0.25,
+            "extension": 0.25,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 74,
+            "induced_vertical_break": 3,
+            "horizontal_break": -17,
+            "spin_rate": 1700,
+            "release_height": 5.1,
+            "extension": 4.9,
+            "vertical_approach_angle": -8
+        },
+        "max": {
+            "velocity": 88,
+            "induced_vertical_break": 13,
+            "horizontal_break": -10,
+            "spin_rate": 1900,
+            "release_height": 6.3,
+            "extension": 6.9,
+            "vertical_approach_angle": -6
+        },
+        "target": {
+            "velocity": 81,
+            "induced_vertical_break": 5,
+            "horizontal_break": 16,
+            "spin_rate": 1800,
+            "release_height": 5.3,
+            "extension": 5.9,
+            "vertical_approach_angle": -7
+        },
+        "goal": {
+            "velocity": "target",
+            "induced_vertical_break": "min",
+            "horizontal_break": "min",
+            "spin_rate": "none",
+            "release_height": "max",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "RH_Splitter": {
+        "weight": {
+            "velocity": 1.1,
+            "induced_vertical_break": 1.1,
+            "horizontal_break": 1,
+            "spin_rate": 1.1,
+            "release_height": 0.5,
+            "extension": 0.1,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 74,
+            "induced_vertical_break": 5,
+            "horizontal_break": 5,
+            "spin_rate": 1200,
+            "release_height": 5,
+            "extension": 4.9,
+            "vertical_approach_angle": -8.5
+        },
+        "max": {
+            "velocity": 90,
+            "induced_vertical_break": 10,
+            "horizontal_break": 10,
+            "spin_rate": 1600,
+            "release_height": 7,
+            "extension": 6.9,
+            "vertical_approach_angle": -6.5
+        },
+        "target": {
+            "velocity": 81,
+            "induced_vertical_break": 6,
+            "horizontal_break": 11,
+            "spin_rate": 1300,
+            "release_height": 5.7,
+            "extension": 5.9,
+            "vertical_approach_angle": -7.5
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "min",
+            "horizontal_break": "max",
+            "spin_rate": "min",
+            "release_height": "min",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    },
+    "LH_Splitter": {
+        "weight": {
+            "velocity": 1.1,
+            "induced_vertical_break": 1.1,
+            "horizontal_break": 1,
+            "spin_rate": 1.1,
+            "release_height": 0.5,
+            "extension": 0.1,
+            "vertical_approach_angle": 0.1
+        },
+        "min": {
+            "velocity": 72,
+            "induced_vertical_break": 5,
+            "horizontal_break": -10,
+            "spin_rate": 1200,
+            "release_height": 5,
+            "extension": 4.9,
+            "vertical_approach_angle": -8.5
+        },
+        "max": {
+            "velocity": 88,
+            "induced_vertical_break": 10,
+            "horizontal_break": -5,
+            "spin_rate": 1600,
+            "release_height": 7,
+            "extension": 6.9,
+            "vertical_approach_angle": -6.5
+        },
+        "target": {
+            "velocity": 79,
+            "induced_vertical_break": 6,
+            "horizontal_break": -11,
+            "spin_rate": 1300,
+            "release_height": 5.7,
+            "extension": 5.9,
+            "vertical_approach_angle": -7.5
+        },
+        "goal": {
+            "velocity": "max",
+            "induced_vertical_break": "min",
+            "horizontal_break": "min",
+            "spin_rate": "min",
+            "release_height": "min",
+            "extension": "max",
+            "vertical_approach_angle": "min"
+        }
+    }
+}
