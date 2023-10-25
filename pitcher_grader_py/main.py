@@ -9,8 +9,19 @@ def save_base_metrics(filename, base_metrics):
         json.dump(base_metrics, file, indent = 4)
 
 def load_base_metrics(filename):
-    with open(filename, 'r') as file:
-        return json.load(file)
+    try:
+        # Attempt to load base_metrics from a file
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        # Handle the case where the file is not found
+        messagebox.showerror("Error", "Could not find base_metrics.json.")
+        return {}
+    except json.JSONDecodeError:
+        # Handle the case where there's an issue decoding the JSON file
+        messagebox.showerror("Error", "Invalid JSON format in base_metrics.json.")
+        return {}
+    
     
 
     
@@ -159,6 +170,34 @@ def grade_pitch(base_metrics, pitch_type, scale, *args):
 
     return weighted_total_score / weight   
 
+def grade_metrics(base_metrics, pitch_type, scale, *args):
+    try:
+        base_pitch = base_metrics[pitch_type]
+    except KeyError:
+        print(f"Error: Pitch type '{pitch_type}' not found in base_metrics.")
+        return -1
+    if len(args) != 7:
+        print("grade_pitch() usage: base_pitc, scale, velocity, ivBreak, hBreak, spinRate, relHeight, extension, vAppAngle")
+        return -1
+    grades = []
+
+    index = 0
+    while index < 7:
+        metric = get_metric_type(index)
+        command = base_pitch["goal"][metric].lower()
+        if command == "min" or command == "max":
+            grades.append(grade_command(command, base_pitch["min"][metric], base_pitch["max"][metric], args[index], scale))
+        elif command == "target" or command == "edge":
+            grades.append(grade_command(command, base_pitch["min"][metric], base_pitch["max"][metric], base_pitch["target"][metric], args[index], scale))
+        elif command == "none":
+            grades.append(grade_command(command, scale))
+        else:
+            print("grade_pitch(): Improper goal in base_metrics.json")
+            return -1
+        index = index + 1
+        
+    return grades
+
 class PitchGradeApp:
     def __init__(self, root):
         self.root = root
@@ -233,14 +272,14 @@ class PitchGradeApp:
         for form in self.pitch_forms:
             form_count = form_count + 1
             widgets = form.winfo_children()
-            results.append(grade_pitch(self.base_metrics, pitch_choices[form_count - 1], 200, float(widgets[2].get()), 
+            results.append(int(grade_pitch(self.base_metrics, pitch_choices[form_count - 1], 200, float(widgets[2].get()), 
                                                                 float(widgets[4].get()), float(widgets[6].get()), 
                                                                 float(widgets[8].get()), float(widgets[10].get()), float(widgets[12].get()), 
-                                                                float(widgets[14].get())))
+                                                                float(widgets[14].get()))))
         for score in results:
             total = total + score
         average = total / form_count
-        results.append(average)
+        results.append(int(average))
         return results
     
     def restart(self):
@@ -257,7 +296,9 @@ class PitchGradeApp:
 
         self.pitch_forms = []
         index = 0
-        while index < len(pitch_choices):
+        results_text = tk.StringVar()
+        results_text.set("Scores: ")
+        while index < len(pitch_choices): #The structure of the forms is important for submit_forms. It needs to know the indexes of the entries.
             self.pitch_forms.append(ttk.Frame(self.frame2))
             pitch_label = ttk.Label(self.pitch_forms[index], text = pitch_choices[index])
             velocity_label = ttk.Label(self.pitch_forms[index], text="Velocity:")
@@ -280,6 +321,7 @@ class PitchGradeApp:
 
             vertical_approach_angle_label = ttk.Label(self.pitch_forms[index], text="Vert App Angle:")
             vertical_approach_angle_entry = ttk.Entry(self.pitch_forms[index])#Index = 14
+
 
             pitch_label.grid(row = 0, column = 0, padx=5, pady=5)
 
@@ -307,9 +349,10 @@ class PitchGradeApp:
             index = index + 1
 
 
-        grade_button = ttk.Button(self.frame2, text="Grade Pitch", command=lambda: print("Pitches graded:" + 
-                                                            str(self.submit_forms(pitch_choices))))
+        grade_button = ttk.Button(self.frame2, text="Grade Pitch", command=lambda: results_text.set("Scores: " + str(self.submit_forms(pitch_choices))))
         back_button = ttk.Button(self.frame2, text="New Pitcher", command=lambda: self.restart())
+        results_label = ttk.Label(self.frame2, textvariable=results_text)
+        results_label.pack(pady=20,padx=20)
         grade_button.pack(side=tk.LEFT)
         back_button.pack(side = tk.LEFT)
 
@@ -320,6 +363,7 @@ class PitchGradeApp:
 #TODO: Make an app class and pass the root. Make screens with frames that come from functions, the next function will destroy the previous frame
 
 if __name__ == "__main__":
+    print(grade_metrics(load_base_metrics("base_metrics.json"), "RH_4S_Fastball", 10, 100, 23, 8.2, 2600, 5, 5, 5))
     root = tk.Tk()
     app = PitchGradeApp(root)
     root.mainloop()
