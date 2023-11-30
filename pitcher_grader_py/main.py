@@ -171,14 +171,15 @@ def grade_pitch(base_metrics, pitch_type, scale, *args):
     return weighted_total_score / weight   
 
 def grade_metrics(base_metrics, pitch_type, scale, *args):
+    failed_values = [-1, -1, -1, -1, -1, -1, -1]
     try:
         base_pitch = base_metrics[pitch_type]
     except KeyError:
         print(f"Error: Pitch type '{pitch_type}' not found in base_metrics.")
-        return -1
+        return failed_values
     if len(args) != 7:
         print("grade_pitch() usage: base_pitc, scale, velocity, ivBreak, hBreak, spinRate, relHeight, extension, vAppAngle")
-        return -1
+        return failed_values
     grades = []
 
     index = 0

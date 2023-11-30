@@ -42,7 +42,7 @@ def grade_split():
     grades = main.grade_metrics(base_metrics, value0, 10, value1, value2, value3, value4, value5, value6, value7)
     index = 0
     while index < len(grades):
-        grades[index] = round(grades[index], 3)
+        grades[index] = round(grades[index], 1)
         index = index + 1
 
     data = {'velocity': grades[0], 'ivBreak': grades[1], 'hBreak': grades[2], 'spinRate': grades[3],
@@ -60,42 +60,20 @@ def restore_defaults():
 
     return jsonify({"message": "GET request received", "result": "Default metrics successfully restored."})
 
-#new_metrics() allows a client to upload a new set of base_metrics.
-#This function is flexible in that if you are looking to update the whole base_metrics, as long as the structure and naming conventions are the same it will update
-#If you are looking to update only one metric in one particular category then as long as the structure is {pitch_name: {category:{metric: value}}} it will update that one metric
-#The function is also designed to prevent accidental or malicious wipes of the data or destroying of the dictionary structure.
-@app.route('/api/new_metrics', methods=['POST'])
-def new_metrics():
+@app.route('/api/get_metrics', methods = ['GET'])
+def get_metrics():
+    return jsonify(base_metrics)
+
+#edit_metric() will change the values and information about a certain metric. Must include: pitch_type, goal, max, min, target, metric
+@app.route('/api/edit_metric', methods=['POST'])
+def edit_metric():
     flag = False #True if the structure of the dictionary does not follow the designed structure or the names are incorrect. pitch{category{metric}}
     new_metrics = request.get_json()
-    for pitch in new_metrics:
-        try:
-        # Check if the specified pitch type exists in base_metrics
-            pitch_data = base_metrics[pitch]
-        except KeyError:
-            response = f"Error: Pitch type '{pitch}' not found in base_metrics."
-            base_metrics = main.load_base_metrics("base_metrics.json") #Restore metrics from last save
-            return jsonify({"message": "POST request received", "result": response})
-        for category in pitch:
-            try:
-            # Check if the specified pitch type exists in base_metrics
-                category_data = base_metrics[pitch][category]
-            except KeyError:
-                response = f"Error: Category type '{category}' not found in base_metrics."
-                base_metrics = main.load_base_metrics("base_metrics.json") #Restore metrics from last save
-                return jsonify({"message": "POST request received", "result": response})
-            for metric in category:
-                try:
-                    # Check if the specified pitch type exists in base_metrics
-                    base_metrics[pitch][category][metric] = new_metrics[pitch][category][metric]
-                except KeyError:
-                    response = f"Error: Metric type '{metric}' not found in base_metrics."
-                    base_metrics = main.load_base_metrics("base_metrics.json") #Restore metrics from last save
-                    return jsonify({"message": "POST request received", "result": response})
-
-    base_metrics = request.get_json()
+    base_metrics[new_metrics["pitch_type"]]["max"][new_metrics["metric"]] = new_metrics["max"]
+    base_metrics[new_metrics["pitch_type"]]["min"][new_metrics["metric"]] = new_metrics["min"]
+    base_metrics[new_metrics["pitch_type"]]["target"][new_metrics["metric"]] = new_metrics["target"]
+    base_metrics[new_metrics["pitch_type"]]["goal"][new_metrics["metric"]] = new_metrics["goal"]
     main.save_base_metrics("base_metrics.json", base_metrics)
-
     return jsonify({"message": "POST request received", "result": "The new metrics have been saved."})
 
 #This function requires the name of the pitch you are looking for EX: /api/get_avgs/RH_4S_Fastball
@@ -104,10 +82,12 @@ def new_metrics():
 def get_avgs(pitch_name):
     try:
         averages = base_metrics[pitch_name]["avg"]
-        return jsonify({"message": "GET request received", "result": averages})
+        data = {'velocity': averages["velocity"], 'ivBreak': averages["induced_vertical_break"], 'hBreak': averages["horizontal_break"], 'spinRate': averages["spin_rate"],
+                                                'relHeight': averages["release_height"], 'extension': averages["extension"], 'vAppAngle': averages["vertical_approach_angle"]}
+        return jsonify(data)
     except KeyError:
         response = f"Error: Pitch type '{pitch_name}' not found in base_metrics."
-        return jsonify({"message": "GET request received", "result": response})
+        return jsonify({"response": response})
 
 
 
