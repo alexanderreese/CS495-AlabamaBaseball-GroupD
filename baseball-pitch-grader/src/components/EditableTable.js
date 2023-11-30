@@ -20,12 +20,18 @@ const EditableTable = ({ data, columns, options }) => {
     setTableData([...tableData, newRow]);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     // TODO //////////////////////////////////////////////
     // Call python backend to grade each row in tableData
+    // Iterate through each row in tableData
+    const updatedTableData = await Promise.all(tableData.map(row => gradePitch(row)));
+
+    // Update the state with the new array
+    //setTableData(updatedTableData);
+
 
     // Use navigate to go to the graphs page with data
-    navigate('/export-pdf', { state: { tableData: tableData } });
+    navigate('/export-pdf', { state: { tableData: updatedTableData } });
   };
 
   const handleFileChange = (event) => {
@@ -46,6 +52,46 @@ const EditableTable = ({ data, columns, options }) => {
               console.error("Error processing file:", err);
           });
     };
+
+    const gradePitch = async (row) => {
+      // Determine the handedness and pitch type
+      let handedness = row[2] === "Right" ? "RH" : "LH";
+      let pitchType = row[1].replace(/\s+/g, '_'); // Replace spaces with underscores
+      // Construct the pitch_type variable
+      let pitch_type = `${handedness}_${pitchType}`;
+
+      try {
+          const params = {
+              pitch_type: pitch_type, 
+              velocity: row[3], 
+              ivBreak: row[4], 
+              hBreak: row[5], 
+              spinRate: row[6], 
+              relHeight: row[7], 
+              extension: row[8], 
+              vAppAngle: row[9] 
+          };
+  
+          const pitchGrade = await axios.get('http://localhost:5000/api/grade_pitch', { params });
+          const pitchMetricGrades = await axios.get('http://localhost:5000/api/grade_split', { params });
+          
+          row[3] = pitchMetricGrades.data.velocity;
+          row[4] = pitchMetricGrades.data.ivBreak;
+          row[5] = pitchMetricGrades.data.hBreak;
+          row[6] = pitchMetricGrades.data.spinRate;
+          row[7] = pitchMetricGrades.data.relHeight;
+          row[8] = pitchMetricGrades.data.extension;
+          row[9] = pitchMetricGrades.data.vAppAngle;
+          row[10] = pitchGrade.data.pitch_grade;
+
+          console.log(pitchGrade.data);
+          console.log(pitchMetricGrades.data);
+          return row;
+      } catch (error) {
+          console.error('Error fetching data: ', error);
+      }
+  };
+  
 
   return (
     <div>

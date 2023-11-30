@@ -13,7 +13,7 @@ const ExportPDF = () => {
     if (!location.state?.tableData) return;
   
     // Creating a new copy of tableData
-    const tableDataCopy = location.state.tableData.map(row => [...row, 100]);
+    const tableDataCopy = location.state.tableData.map(row => [...row]);
   
     // Group data by the first two columns
     const grouped = groupByColumns(tableDataCopy);
