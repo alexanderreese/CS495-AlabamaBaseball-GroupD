@@ -14,7 +14,7 @@ const PDFGraphsPage = ({gData}) => {
       {Object.keys(groupedData).map((key, index) => (
         <div key={key} id={`graph-container-${index}`}>
           <h2>{key.replace('_', ' - ')}</h2>
-          <PitchingDataLineGraph data={groupedData[key].map(row => row.slice(3))} />
+          <PitchingDataLineGraph data={groupedData[key].map(row => row.slice(3, -1))} />
 
           {/* Displaying data below each graph */}
           <div>
