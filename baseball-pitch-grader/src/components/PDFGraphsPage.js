@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PitchingDataLineGraph from './PitchingDataLineGraph';
-//import './GraphsPage.css';
+import './GraphsPage.css';
 
 const PDFGraphsPage = ({gData}) => {
   const [groupedData, setGroupedData] = React.useState(gData);
@@ -18,7 +18,7 @@ const PDFGraphsPage = ({gData}) => {
 
           {/* Displaying data below each graph */}
           <div>
-            <table>
+            <table class="graph-data">
               <thead>
                 <tr>
                   <th>Velocity</th>

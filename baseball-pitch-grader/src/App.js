@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import EditableTable from './components/EditableTable';
 import ExportPDF from './components/ExportPDF';
+import EditableTable from './components/EditableTable';
 
 const App = () => {
-  const initialData = [[null, null, null, null, null, null, null, null, null, null]];
+  const initialData = [[null, 'null', null, null, null, null, null, null, null, null]];
   const columns = [
     'Pitcher Name',
     'Pitch Type', 
@@ -34,7 +34,10 @@ const App = () => {
     '12/6',
     'Traditional CH',
     'Sidespin SH',
-    'Splitter'
+    'Splitter',
+    'Sinker',
+    'ChangeUp',
+    'Curveball'
   ];
   const handTypes = ['Right', 'Left'];
 

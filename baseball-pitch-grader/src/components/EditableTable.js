@@ -72,8 +72,8 @@ const EditableTable = ({ data, columns, options }) => {
               vAppAngle: row[9] 
           };
   
-          const pitchGrade = await axios.get('http://localhost:5000/api/grade_pitch', { params });
-          const pitchMetricGrades = await axios.get('http://localhost:5000/api/grade_split', { params });
+          const pitchGrade = await axios.get('http://wmill33.pythonanywhere.com/api/grade_pitch', { params });
+          const pitchMetricGrades = await axios.get('http://wmill33.pythonanywhere.com/api/grade_split', { params });
           
           row[3] = pitchMetricGrades.data.velocity;
           row[4] = pitchMetricGrades.data.ivBreak;
