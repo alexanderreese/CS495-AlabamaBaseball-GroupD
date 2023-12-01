@@ -26,3 +26,13 @@
     width: 100px; /* Adjust width as needed */
     /*height: 30px; /* Adjust height as needed */
   }
+
+  .button {
+    background-color: #d6150e;
+    color: white;
+    border: 5px;
+    border-color: rgb(0, 0, 0); 
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+  }

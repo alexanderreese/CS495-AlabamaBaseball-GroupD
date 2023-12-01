@@ -142,8 +142,8 @@ const EditableTable = ({ data, columns, options }) => {
           ))}
         </tbody>
       </table>
-        <button onClick={addRow}>Add Row</button>
-        <button onClick={handleSubmit}>Submit</button> 
+        <button className= 'button' onClick={addRow}>Add Row</button>
+        <button className='button' onClick={handleSubmit}>Submit</button> 
       <table>
         <input type="file" accept=".csv" onChange={handleFileChange} />
         <button onClick={handleFileUpload}>Upload CSV</button>
