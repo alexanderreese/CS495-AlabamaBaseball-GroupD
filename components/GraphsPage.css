@@ -1,0 +1,50 @@
+/* Basic reset for table styling */
+.graph-data table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: auto;
+}
+
+/* Style for table headers */
+.graph-data th {
+  background-color: #990000;
+  color: white;
+  text-align: left;
+  padding: 8px;
+}
+
+/* Style for table rows */
+.graph-data td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternate row background for better readability */
+.graph-data tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect for rows */
+.graph-data tr:hover {
+  background-color: #ddd;
+}
+
+/* Table head style */
+.graph-data thead {
+  position: sticky;
+  top: 0;
+}
+
+/* General font styling, can be adjusted as needed */
+.graph-data table, th, td {
+  font-family: Arial, sans-serif;
+  font-size: 0.9em;
+}
+
+/* Style to give some padding and margin around the table */
+.graph-data div {
+  overflow-x: auto;
+  margin: 20px 0;
+  padding: 0 20px;
+}

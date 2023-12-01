@@ -1,0 +1,38 @@
+/* Define the styles for the table */
+.editable-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .editable-table th, .editable-table td {
+    border: 1px solid #ddd;
+    padding: 4px;
+    text-align: center;
+  }
+  
+  /* Define the styles for the dropdown selects */
+  .select-cell {
+    width: 100px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+  }
+  
+  /* Define the styles for the text input cells */
+  .input-cell {
+    width: 50px; /* Adjust width as needed */
+    /*height: 30px; /* Adjust height as needed */
+  }
+  
+  .name-cell {
+    width: 100px; /* Adjust width as needed */
+    /*height: 30px; /* Adjust height as needed */
+  }
+
+  .button {
+    background-color: #d6150e;
+    color: white;
+    border: 5px;
+    border-color: rgb(0, 0, 0); 
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+  }
