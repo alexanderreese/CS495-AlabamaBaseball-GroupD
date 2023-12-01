@@ -46,9 +46,6 @@ def grade_target(min: float, max: float, target: float, value: float, scale: int
     if target < min or target > max:
         print("grade_target(): Target is out of bounds")
         return -1
-    if target == min or target == max:
-        print("grade_target(): Target is on the edge of the range")
-        return -1
     
     if value < min or value > max:
         return 0 #Value has completely missed target relative to the bounds
@@ -71,9 +68,6 @@ def grade_edge(min: float, max: float, target: float, value: float, scale: int) 
         return -1
     if target < min or target > max:
         print("grade_edge(): Target is out of bounds")
-        return -1
-    if target == min or target == max:
-        print("grade_edge(): Target is on the edge of the range")
         return -1
     
     if value < min or value > max:
