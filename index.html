@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title style="text-align:center;">Group D - Pitch Grader</title>
+    <!-- Add CSS styles here if desired -->
+</head>
+<body>
+
+<header>
+    <h1 style="text-align:center;">Pitch Grader</h1>
+</header>
+
+<section id="project-description">
+    <h2 style="text-align:center;">Project Description</h2>
+    <p style="text-align:center;">
+        University of Alabama Baseball team wants a tool to rate baseball pitches. <br/>
+        They want this done using statistics gathered from the UA baseball team as well as other NCAA college baseball teams. <br/>
+        Using these statistics, the tool should rate each pitch a pitcher throws. 
+    </p>
+</section>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cpXQPGXXHec?si=ySsqhlEIxPpx7UJx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<section id="Client Needs">
+    <h2>Client Needs</h2>
+    <h3>
+        Needs:
+    </h3>
+
+    <p>
+    &emsp;Automate quantifying a rating for pitches<br>
+    &emsp;Grade 26 possible pitches<br>
+    &emsp;Output a rating<br>
+    </p>
+    <h3>
+        Wants:
+    </h3>
+    <p>
+    &emsp;Ability to change the grading criteria<br>
+    &emsp;Ability to insert multiple pitches by uploading an excel sheet<br>
+    </p>
+</section>
+
+<section id="Goals">
+    <h2>Sprint 1</h2>
+    <p>
+        Our goals for this sprint were to develop a standardized system to rate the pitches,
+        and to develop our clickable prototype.<br/> 
+        We achieved both of these goals and also decided to recreate our project in React for more versatility. 
+    </p>
+    <h2>Sprint 2</h2>
+    <p>
+        Our goal for this sprint was to develop the React prototype and add our calculation methods to each pitch. <br/>
+        We were able to develop the React prototype, but the calculations proved to be very time consuming and we had to push that goal to sprint 3. <br/>
+        In place of our unachieved goal, we added graphs for visual representation of the pitch ratings, got an updated list of client needs and wants.<br/>
+        We also began developing a python backend for simplicity of calculation.
+    </p>
+    <h2>Sprint 3</h2>
+    <p>
+        Our client updated his list of needs to include the ability to enter multiple pitches at once, produce graphs for each entered pitch, output an arsenal score, and add a settings page to change the rating scales of each pitch. <br/>
+        In addition to the new list of needs, the client had a list of less important “wants”. These wants included the ability to read in pitches through an excel file, the ability to generate pdf reports of each pitch/pitcher, and to add feedback to the pitcher based on their metrics. <br/>
+        Taking in this updated list of goals, we divided up the tasks as follows:  <br/><br/>
+
+* -> Excel parser and pdf generator: Tyler McWilliams <br/>
+* -> Calculations of all pitches: Will Miller <br/>
+* -> Settings page design and implementation: Luke Lindsay <br/>
+* -> Frontend/backend communication/design: Alex Reese <br/>
+* -> Pitcher feedback: All <br/>
+We were able to achieve every goal our client set, with the exception of the pitcher feedback. We decided that this feedback would require a more in depth understanding of pitching than any of us understood, and the client would not have the time to help us develop that function. <br/>
+The greatest difficulty we faced during this sprint was implementing communication between the JavaScript/React front and the Python back end, developing a method of calculations in the python backend, developing different methods of grading based on the goal of the pitch (whether it should be as high as possible or be as close to a certain score as possible), and finally learning to parse excel files and format PDF reports. <br/>
+Overall we are happy with how our project turned out, and the client was ecstatic to receive more functionality and an overall more advanced program than he had originally anticipated. 
+
+    </p>
+</section>
+
+<section id="team-members">
+    <h2>Team Members</h2>
+    <ul>
+        <li>
+            <h3>Tyler McWilliams</h3>
+            <p>
+                <img src="Tyler_McWilliams.jpg"><br>
+                Name: Tyler McWilliams<br>
+                Role: Front-End Developer<br>
+            </p>
+        </li>
+        <li>
+            <h3>Alex Reese</h3>
+            <p>
+                <img src="Alex_Reese.jpg"><br>
+                Name: Alex Reese<br>
+                Role: Front-End Developer<br>
+            </p>
+        </li>
+        <li>
+            <h3>Luke Lindsay</h3>
+            <p>
+                <img src="Luke_Lindsay.jpg"><br>
+                Name: Luke Lindsay<br>
+                Role: Back-End Scripting/Developer<br>
+            </p>
+        </li>
+        <li>
+            <h3>WIll Miller</h3>
+            <p>
+                <img src="Will_Miller.jpg"><br>
+                Name: Will Miller<br>
+                Role: Back-End Scripting/Developer<br>
+            </p>
+        </li>
+    </ul>
+</section>
+
+
+<!-- Add more sections as needed -->
+
+</body>
+</html>
