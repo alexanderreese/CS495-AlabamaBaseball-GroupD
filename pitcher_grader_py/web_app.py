@@ -91,13 +91,16 @@ def get_avgs(pitch_name):
         averages = base_metrics[pitch_name]["avg"]
         avg_grades = main.grade_metrics(base_metrics, pitch_name, 10, averages["velocity"], averages["induced_vertical_break"], averages["horizontal_break"], 
                                         averages["spin_rate"], averages["release_height"], averages["extension"], averages["vertical_approach_angle"])
+        avg_pitch_grade = main.grade_pitch(base_metrics, pitch_name, 200, averages["velocity"], averages["induced_vertical_break"], averages["horizontal_break"], 
+                                        averages["spin_rate"], averages["release_height"], averages["extension"], averages["vertical_approach_angle"])
+        avg_pitch_grade = round(avg_pitch_grade, 1)
         index = 0
         while index < len(avg_grades):
             avg_grades[index] = round(avg_grades[index], 1)
             index = index + 1
         
         data = {'velocity': avg_grades[0], 'ivBreak': avg_grades[1], 'hBreak': avg_grades[2], 'spinRate': avg_grades[3],
-                                                'relHeight': avg_grades[4], 'extension': avg_grades[5], 'vAppAngle': avg_grades[6]}
+                                                'relHeight': avg_grades[4], 'extension': avg_grades[5], 'vAppAngle': avg_grades[6], 'pitch_grade': avg_pitch_grade}
         return jsonify(data)
     except KeyError:
         response = f"Error: Pitch type '{pitch_name}' not found in base_metrics."
