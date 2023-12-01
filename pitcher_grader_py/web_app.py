@@ -69,6 +69,11 @@ def get_metrics():
 def edit_metric():
     flag = False #True if the structure of the dictionary does not follow the designed structure or the names are incorrect. pitch{category{metric}}
     new_metrics = request.get_json()
+    try:
+        print(base_metrics[new_metrics["pitch_type"]]["max"][new_metrics["metric"]])
+    except KeyError:
+        response = f"Error: Pitch type or metric name not found in base_metrics."
+        return jsonify({"result": response})
     base_metrics[new_metrics["pitch_type"]]["max"][new_metrics["metric"]] = new_metrics["max"]
     base_metrics[new_metrics["pitch_type"]]["min"][new_metrics["metric"]] = new_metrics["min"]
     base_metrics[new_metrics["pitch_type"]]["target"][new_metrics["metric"]] = new_metrics["target"]
