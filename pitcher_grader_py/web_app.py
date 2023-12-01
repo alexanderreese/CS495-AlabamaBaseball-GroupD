@@ -21,7 +21,7 @@ def grade_pitch():
     value6 = float(request.args.get('extension', 0))
     value7 = float(request.args.get('vAppAngle', 0))
 
-    grade = round(main.grade_pitch(base_metrics, value0, 200, value1, value2, value3, value4, value5, value6, value7), 3) #Hard coded max grade to be 200
+    grade = round(main.grade_pitch(base_metrics, value0, 200, value1, value2, value3, value4, value5, value6, value7), 1) #Hard coded max grade to be 200
     # Define the data to be sent in the response
     data = {'pitch_grade': grade}
 
@@ -89,8 +89,15 @@ def edit_metric():
 def get_avgs(pitch_name):
     try:
         averages = base_metrics[pitch_name]["avg"]
-        data = {'velocity': averages["velocity"], 'ivBreak': averages["induced_vertical_break"], 'hBreak': averages["horizontal_break"], 'spinRate': averages["spin_rate"],
-                                                'relHeight': averages["release_height"], 'extension': averages["extension"], 'vAppAngle': averages["vertical_approach_angle"]}
+        avg_grades = main.grade_metrics(base_metrics, pitch_name, 10, averages["velocity"], averages["induced_vertical_break"], averages["horizontal_break"], 
+                                        averages["spin_rate"], averages["release_height"], averages["extension"], averages["vertical_approach_angle"])
+        index = 0
+        while index < len(avg_grades):
+            avg_grades[index] = round(avg_grades[index], 1)
+            index = index + 1
+        
+        data = {'velocity': avg_grades[0], 'ivBreak': avg_grades[1], 'hBreak': avg_grades[2], 'spinRate': avg_grades[3],
+                                                'relHeight': avg_grades[4], 'extension': avg_grades[5], 'vAppAngle': avg_grades[6]}
         return jsonify(data)
     except KeyError:
         response = f"Error: Pitch type '{pitch_name}' not found in base_metrics."
