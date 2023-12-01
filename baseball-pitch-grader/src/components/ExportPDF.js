@@ -50,6 +50,7 @@ const ExportPDF = () => {
           avgRow[7] = response.data.relHeight;
           avgRow[8] = response.data.extension;
           avgRow[9] = response.data.vAppAngle;
+          avgRow[10] = response.data.pitch_grade;
   
           groups[groupKey].push(avgRow);
         } catch (error) {
