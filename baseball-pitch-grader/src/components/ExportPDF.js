@@ -41,18 +41,19 @@ const ExportPDF = () => {
           // Construct the pitch_type variable
           let pitch_type = `${handedness}_${pitchType}`;
           const response = await axios.get('http://wmill33.pythonanywhere.com/api/get_avgs/'+pitch_type);
-          let avgRow = row;
-          avgRow[3] = response.result.velocity;
-          avgRow[4] = response.result.ivBreak;
-          avgRow[5] = response.result.hBreak;
-          avgRow[6] = response.result.spinRate;
-          avgRow[7] = response.result.relHeight;
-          avgRow[8] = response.result.extension;
-          avgRow[9] = response.result.vAppAngle;
+          console.log(response.data);
+          let avgRow = [...row];
+          avgRow[3] = response.data.velocity;
+          avgRow[4] = response.data.ivBreak;
+          avgRow[5] = response.data.hBreak;
+          avgRow[6] = response.data.spinRate;
+          avgRow[7] = response.data.relHeight;
+          avgRow[8] = response.data.extension;
+          avgRow[9] = response.data.vAppAngle;
   
           groups[groupKey].push(avgRow);
         } catch (error) {
-          console.error('API call failed:', error);
+          console.error('get_avgs API call failed:', error);
         }
       }
       // Push the entire row (or the part you want to include) to the corresponding group
