@@ -1,0 +1,51 @@
+/* General styling for the graphs page */
+.graphs-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Styling for each graph section */
+.graph-section {
+  margin-bottom: 40px;
+}
+
+.graph-section h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Styling for tables under each graph */
+.graph-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.graph-section th,
+.graph-section td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.graph-section th {
+  background-color: #2196F3;
+  color: white;
+}
+
+.graph-section tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.graph-section tr:hover {
+  background-color: #ddd;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+  .graph-section table td,
+  .graph-section table th {
+    display: block;
+    width: 100%;
+  }
+}

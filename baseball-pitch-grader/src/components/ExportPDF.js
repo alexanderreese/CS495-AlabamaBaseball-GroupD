@@ -80,7 +80,7 @@ const ExportPDF = () => {
 
   return (
     <div>
-      <button onClick={printDocument}>Download PDF</button>
+      <button onClick={printDocument} className='button'>Download PDF</button>
       <div id="divToPrint" style={{ width: '210mm', height: '297mm' }}>
         <PDFGraphsPage gData={groupedData}/>
       </div>
