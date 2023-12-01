@@ -9,6 +9,7 @@ const PitchingDataLineGraph = ({ data }) => {
   const datasetLabels = ['Velocity', 'Ind. Vert Break', 'Horz Break', 'Spin Rate', 'RelHeight', 'Extension', 'Vert App Angle'];
 
   const colors = [
+    'rgba(0, 0, 0, 1)', //Black for Averages
     'rgba(255, 99, 132, 0.6)', // Red
     'rgba(54, 162, 235, 0.6)', // Blue
     'rgba(255, 206, 86, 0.6)', // Yellow
