@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import main
 
 app = Flask(__name__)
+CORS(app)
 base_metrics = main.load_base_metrics('base_metrics.json')
     
 #Order of arguments: velocity, ivBreak, hBreak, spinRate, relHeight, extension, vAppAngle
