@@ -28,7 +28,7 @@ const PitchingDataLineGraph = ({ data }) => {
 
 
   const datasets = data.map((row, index) => ({
-    label: `Pitch ${index + 1}`,
+    label: index === 0 ? 'Average Scores' : `Pitch ${index}`,
     data: row,
     fill: false,
     backgroundColor: colors[index % colors.length],
